@@ -44,7 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_13_214355) do
     t.string "full_contact"
     t.string "gender"
     t.string "slug"
-    t.string "category"
+    t.string "membership_category"
     t.boolean "newletter"
     t.boolean "terms"
     t.datetime "created_at", null: false
