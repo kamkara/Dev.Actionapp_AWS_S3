@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DevActionapp</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="<%= keywords %>">
+      <!-- Favicon-->
+    <%= favicon_link_tag asset_path('media/ActionIco.jpg') %>
+    <!-- Header links-->
+    <%= render "shared/headers/links" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
+    <!-- flash notice-->
+    <%= render "shared/flash/flash" %>
     <%= yield %>
+    <!-- Footer links-->
+    <%= render "/shared/footers/links" %>
   </body>
 </html>
